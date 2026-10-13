@@ -1,0 +1,106 @@
+{
+  "person": "Constanza Baquedano",
+  "name_variants": [
+    "Constanza Baquedano",
+    "Constanza Baquedano Larraín",
+    "Constanza Baquedano Larrain",
+    "Coni Baquedano",
+    "Dra. Baquedano",
+    "Dr. Baquedano",
+    "Baquedano C."
+  ],
+  "openalex_author": "A5063614355",
+  "news_searches": [
+    "\"Constanza Baquedano\"",
+    "\"Constanza Baquedano Larraín\"",
+    "\"Baquedano\" \"Universidad Adolfo Ibáñez\" neurociencia",
+    "\"Baquedano\" \"Your brain on nature\""
+  ],
+  "google_news_topic": "CAAqLQgKIidDQkFTRndvTkwyY3ZNVEZuWnpac1pHaG1kQklHWlhNdE5ERTVLQUFQAQ",
+  "own_channels": {
+    "youtube_channel_ids": [],
+    "rss_feeds": []
+  },
+  "identity_seed": {
+    "positive": [
+      "neurociencia",
+      "neuroscience",
+      "neurocientífica",
+      "neuroscientist",
+      "meditación",
+      "meditation",
+      "mindfulness",
+      "contemplativ",
+      "naturaleza",
+      "nature connectedness",
+      "conexión con la naturaleza",
+      "neurofenomenología",
+      "neurophenomenology",
+      "conciencia",
+      "consciousness",
+      "psicodélicos",
+      "psychedelic",
+      "psilocibina",
+      "psilocybin",
+      "compasión",
+      "compassion",
+      "salud mental",
+      "mental health",
+      "Universidad Adolfo Ibáñez",
+      "Adolfo Ibanez",
+      "UAI",
+      "CSCN",
+      "Centro de Neurociencia Social y Cognitiva",
+      "Escuela de Psicología",
+      "MIDAP",
+      "Mind and Life",
+      "Mind & Life",
+      "Varela Award",
+      "Francisco Varela",
+      "Lyon",
+      "Antoine Lutz",
+      "Diego Cosmelli",
+      "Resiliencia Andina",
+      "Your brain on nature",
+      "EEG",
+      "cerebro",
+      "brain"
+    ],
+    "negative": [
+      "Plaza Baquedano",
+      "estación Baquedano",
+      "metro Baquedano",
+      "General Baquedano",
+      "Manuel Baquedano",
+      "monumento",
+      "estatua",
+      "Plaza Italia",
+      "Plaza Dignidad"
+    ]
+  },
+  "semantic": {
+    "enabled": true,
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "strong": 0.5,
+    "medium": 0.38,
+    "negative_examples": [
+      "Cortes de tránsito, marchas y manifestaciones en Plaza Baquedano y la estación de metro Baquedano",
+      "El General Manuel Baquedano, la Guerra del Pacífico y el monumento ecuestre",
+      "Resultados deportivos, torneos y campeonatos",
+      "Farándula, espectáculos y televisión",
+      "Avisos de defunción, necrológicas y obituarios"
+    ]
+  },
+  "thresholds": {
+    "publish": 7,
+    "review": 3
+  },
+  "auto_publish": {
+    "news": true,
+    "web": true,
+    "own_channels": true
+  },
+  "oldest_year": 2015,
+  "approve": [],
+  "blocklist": []
+}
