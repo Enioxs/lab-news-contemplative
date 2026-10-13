@@ -101,6 +101,6 @@
     "own_channels": true
   },
   "oldest_year": 2015,
-  "approve": [],
+  "approve": ["Uso de hongos con fines curativos"],
   "blocklist": []
 }
