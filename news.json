@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-13 16:55 UTC",
+  "last_checked": "2026-10-13 17:00 UTC",
   "published": [
     {
       "category": "article",
@@ -252,6 +252,215 @@
       "why": [
         "verified by hand"
       ]
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Ladera Sur",
+      "date": "",
+      "lang": "Spanish",
+      "title": "Naturaleza y salud cerebral desde la ciencia",
+      "url": "https://www.youtube.com/watch?v=b_NQ2-3Hwrg",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "b_NQ2-3Hwrg",
+      "thumb": "https://i.ytimg.com/vi/b_NQ2-3Hwrg/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "UESTV",
+      "date": "",
+      "lang": "Spanish",
+      "title": "NeuroPodcast capítulo 9 - La Neurociencia del Mindfulness",
+      "url": "https://www.youtube.com/watch?v=0kK5QF5Ui3M",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "0kK5QF5Ui3M",
+      "thumb": "https://i.ytimg.com/vi/0kK5QF5Ui3M/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Segunda Frontera",
+      "date": "",
+      "lang": "Spanish",
+      "title": "Neurociencia del mindfulness y psicodélicos - Constanza Baquedano",
+      "url": "https://www.youtube.com/watch?v=tvXmzEYx-eg",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "tvXmzEYx-eg",
+      "thumb": "https://i.ytimg.com/vi/tvXmzEYx-eg/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Segunda Frontera",
+      "date": "",
+      "lang": "Spanish",
+      "title": "Entrenar el \"darse cuenta\": Psicodélicos y meditación - Constanza Baquedano",
+      "url": "https://www.youtube.com/watch?v=DcRpHCfPq_E",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "DcRpHCfPq_E",
+      "thumb": "https://i.ytimg.com/vi/DcRpHCfPq_E/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "FUNDACIÓN EDUCACIONAL ARREBOL",
+      "date": "",
+      "lang": "",
+      "title": "Dra. Constanza Baquedano - Simposio Conversaciones Sobre Neurociencia y Educación 2021",
+      "url": "https://www.youtube.com/watch?v=8P2etZBHb38",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "8P2etZBHb38",
+      "thumb": "https://i.ytimg.com/vi/8P2etZBHb38/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Mi Última Neurona ",
+      "date": "",
+      "lang": "Spanish",
+      "title": "¿Sabes qué son los estados ordinarios y no ordinarios de la #consciencia? 🧠",
+      "url": "https://www.youtube.com/watch?v=OXp0jX-goYk",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "OXp0jX-goYk",
+      "thumb": "https://i.ytimg.com/vi/OXp0jX-goYk/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Laboratorio de Fenomenología Corporal",
+      "date": "",
+      "lang": "Spanish",
+      "title": "Jornada Micro-Fenomenológica 2021 - Presentación de Constanza Baquedano",
+      "url": "https://www.youtube.com/watch?v=lWw3ypb0Z84",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "lWw3ypb0Z84",
+      "thumb": "https://i.ytimg.com/vi/lWw3ypb0Z84/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Universidad Adolfo Ibáñez",
+      "date": "",
+      "lang": "Spanish",
+      "title": "Neurociencias de la Conciencia y sus transformaciones: Sueño, Meditación y Psicodélicos",
+      "url": "https://www.youtube.com/watch?v=7eZtkBAI8m0",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "7eZtkBAI8m0",
+      "thumb": "https://i.ytimg.com/vi/7eZtkBAI8m0/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Neuro Historia",
+      "date": "",
+      "lang": "",
+      "title": "Jorge Mpodozis, Constanza Baquedano, Ignacio Cea y Manuel Rodríguez en Enigma UChile",
+      "url": "https://www.youtube.com/watch?v=DxvVpO-3bdo",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "DxvVpO-3bdo",
+      "thumb": "https://i.ytimg.com/vi/DxvVpO-3bdo/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "Nutrición y Dietética UdeC",
+      "date": "",
+      "lang": "Spanish",
+      "title": "Conversatorio \"Alimentación Consciente: Una mirada desde el Mindfulness\"",
+      "url": "https://www.youtube.com/watch?v=oNw_1YsxoEY",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "oNw_1YsxoEY",
+      "thumb": "https://i.ytimg.com/vi/oNw_1YsxoEY/hqdefault.jpg"
+    },
+    {
+      "category": "video",
+      "platform": "youtube",
+      "kind": "Video",
+      "outlet": "OTIC SOFOFA",
+      "date": "",
+      "lang": "Spanish",
+      "title": "Mindfulness y sus efectos en la salud mental",
+      "url": "https://www.youtube.com/watch?v=ylJjWokvaPo",
+      "snippet": "",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ],
+      "video_id": "ylJjWokvaPo",
+      "thumb": "https://i.ytimg.com/vi/ylJjWokvaPo/hqdefault.jpg"
     }
   ],
   "review": [],
@@ -259,14 +468,15 @@
   "sources": {
     "OpenAlex profile": "ok (18 papers)",
     "Semantic AI": "ok (34 examples of her, 5 of not-her)",
-    "Links added by hand": "ok (0)",
+    "Links added by hand": "ok (11)",
     "Google News": "ok (22)",
     "Bing News": "ok (0)",
     "GDELT": "ok (0)",
     "Own channels": "ok (0)"
   },
   "counts": {
-    "article": 16
+    "article": 16,
+    "video": 11
   },
   "excluded_papers": [
     {

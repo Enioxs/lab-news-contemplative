@@ -6,13 +6,13 @@ The robot found these but was not sure, so they are **not** on the website yet.
 - **Hide it forever:** paste the same line into `blocklist`. The robot also learns from this.
 - Saving `config.json` re-runs the robot within a couple of minutes.
 
-_Last check: 2026-10-13 16:55 UTC_
+_Last check: 2026-10-13 17:00 UTC_
 
 ## Sources
 
 - OpenAlex profile: ok (18 papers)
 - Semantic AI: ok (34 examples of her, 5 of not-her)
-- Links added by hand: ok (0)
+- Links added by hand: ok (11)
 - Google News: ok (22)
 - Bing News: ok (0)
 - GDELT: ok (0)
