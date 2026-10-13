@@ -437,6 +437,22 @@ def linkedin_details(link, kind, pid):
     return out
 
 
+def youtube_date(vid):
+    """Upload date from the public video page. YouTube sometimes hides it from servers; then we try again next day."""
+    try:
+        page = http(f"https://www.youtube.com/watch?v={vid}&hl=en",
+                    headers={"Cookie": "CONSENT=YES+cb; SOCS=CAI", "Accept-Language": "en-US,en;q=0.9"})
+    except Exception:
+        return ""
+    for pat in (r'"uploadDate"\s*:\s*"(\d{4}-\d{2}-\d{2})', r'"publishDate"\s*:\s*"(\d{4}-\d{2}-\d{2})',
+                r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})',
+                r'itemprop="(?:uploadDate|datePublished)"\s+content="(\d{4}-\d{2}-\d{2})'):
+        m = re.search(pat, page)
+        if m:
+            return m.group(1)
+    return ""
+
+
 def src_manual_links(cfg, known_urls):
     """Links you paste in config.json -> "add_links". Trusted: published right away.
     YouTube details come from YouTube's public oEmbed endpoint (free, no key)."""
@@ -469,13 +485,7 @@ def src_manual_links(cfg, known_urls):
             except Exception as e:
                 log(f"    YouTube details failed for {link}: {e}")
             if not date:
-                try:
-                    page = http(link)
-                    m = re.search(r'"(?:uploadDate|datePublished)"\s*:\s*"(\d{4}-\d{2}-\d{2})', page) or \
-                        re.search(r'itemprop="(?:uploadDate|datePublished)"\s+content="(\d{4}-\d{2}-\d{2})', page)
-                    date = m.group(1) if m else ""
-                except Exception:
-                    pass
+                date = youtube_date(vid)
         elif code_ig or x_id or li_id:
             if code_ig:
                 d = instagram_details(link); fallback = "Post on Instagram"
@@ -878,7 +888,29 @@ def main():
         if gone:
             log(f"Removed {gone} paper(s) from {k}")
 
-    # 2c) Links you added by hand -> published right away
+    # 2c) Links you added by hand -> published right away.
+    #     If a link is already published, your date/title/kind in config.json updates it.
+    by_key = {url_key(x["url"]): x for x in db["published"]}
+    for entry in cfg.get("add_links", []):
+        if not isinstance(entry, dict) or not entry.get("url"):
+            continue
+        u = entry["url"].strip()
+        if youtube_id(u):
+            u = f"https://www.youtube.com/watch?v={youtube_id(u)}"
+        old = by_key.get(url_key(u))
+        if old:
+            for f in ("date", "title", "kind", "outlet"):
+                if entry.get(f) and old.get(f) != entry[f]:
+                    old[f] = entry[f]
+            if entry.get("text"):
+                old["snippet"] = entry["text"]
+    # Videos still without a date: try again every run (YouTube sometimes answers later)
+    for x in db["published"]:
+        if x.get("video_id") and not x.get("date"):
+            d = youtube_date(x["video_id"])
+            if d:
+                x["date"] = d
+                log(f"  date found for video: {x['title'][:50]} -> {d}")
     seen0 = db["published"] + db["review"] + db.get("excluded_papers", [])
     man = run_source("Links added by hand", lambda: src_manual_links(cfg, {url_key(x["url"]) for x in seen0}))
     for item in man:
