@@ -297,7 +297,15 @@ def src_bing_news(cfg):
 def src_gdelt(cfg):
     url = ("https://api.gdeltproject.org/api/v2/doc/doc?mode=artlist&format=json&maxrecords=250"
            "&sort=datedesc&timespan=3months&query=" + urllib.parse.quote(f'"{cfg["person"]}"'))
-    data = get_json(url, timeout=45)
+    import time
+    for attempt in range(4):
+        try:
+            data = get_json(url, timeout=45)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 3:
+                raise
+            time.sleep(10 * (attempt + 1))
     return [new_item(a.get("title", ""), a.get("url", ""), "GDELT", a.get("domain", ""),
                      to_date(a.get("seendate", "")), "", True) for a in data.get("articles", [])]
 
@@ -356,15 +364,18 @@ def build_identity(cfg, db):
                     ident["paper_titles"].append(w["title"])
                     ident.setdefault("paper_texts", []).append(
                         (w["title"] + ". " + rebuild_abstract(w.get("abstract_inverted_index")))[:1200])
-                for a in w.get("authorships", []):
-                    name = (a.get("author") or {}).get("display_name", "")
-                    if (a.get("author") or {}).get("id", "").endswith(aid):
-                        for i in a.get("institutions", []):
-                            inst[i.get("display_name", "")] += 1
+                for a in w.get("authorships") or []:
+                    author = a.get("author") or {}
+                    name = author.get("display_name") or ""
+                    if (author.get("id") or "").endswith(aid):
+                        for i in a.get("institutions") or []:
+                            if i.get("display_name"):
+                                inst[i["display_name"]] += 1
                     elif name:
                         co[name] += 1
-                for t in w.get("topics", []) or []:
-                    top[t.get("display_name", "")] += 1
+                for t in w.get("topics") or []:
+                    if t.get("display_name"):
+                        top[t["display_name"]] += 1
             ident["coauthors"] = [n for n, _ in co.most_common(40)]
             ident["institutions"] = [n for n, _ in inst.most_common(10) if n]
             ident["topics"] = [n for n, _ in top.most_common(15) if n]
@@ -529,6 +540,39 @@ def fetch_page(url):
     return True, meta + " " + text, pw
 
 
+# ============================================================ papers filter
+
+ACADEMIC_DOMAINS = [
+    "doi.org", "sciencedirect.com", "elsevier.com", "cell.com", "frontiersin.org", "nature.com",
+    "springer.com", "link.springer.com", "springeropen.com", "wiley.com", "onlinelibrary.wiley.com",
+    "tandfonline.com", "mdpi.com", "plos.org", "journals.plos.org", "sagepub.com", "oup.com",
+    "academic.oup.com", "cambridge.org", "jstor.org", "apa.org", "psycnet.apa.org", "bmj.com",
+    "ncbi.nlm.nih.gov", "pubmed.ncbi.nlm.nih.gov", "europepmc.org", "researchgate.net",
+    "academia.edu", "scholar.google.com", "semanticscholar.org", "openalex.org", "orcid.org",
+    "arxiv.org", "biorxiv.org", "medrxiv.org", "psyarxiv.com", "osf.io", "ssrn.com", "zenodo.org",
+    "pure.uai.cl", "repositorio.uai.cl", "scielo.org", "scielo.cl", "redalyc.org", "dialnet.unirioja.es",
+    "hal.science", "theses.fr", "constructivist.info", "ouci.dntb.gov.ua", "scite.ai", "dimensions.ai",
+]
+
+
+def is_paper(item, ident, cfg):
+    """True if this is one of her scientific papers (those live in the Publications section)."""
+    if not cfg.get("exclude_papers", True):
+        return False
+    d = domain(item["url"]) or item.get("outlet_domain", "")
+    od = item.get("outlet_domain", "")
+    for x in ACADEMIC_DOMAINS + cfg.get("extra_paper_domains", []):
+        if d == x or d.endswith("." + x) or od == x or od.endswith("." + x):
+            return True
+    tk = title_key(item["title"])
+    if len(tk) >= 20:
+        for t in ident.get("paper_titles", []):
+            pk = title_key(t)
+            if len(pk) >= 20 and (tk == pk or tk.startswith(pk[:60]) or pk.startswith(tk[:60])):
+                return True
+    return False
+
+
 # ============================================================ decisions
 
 def matches_any(text, needles):
@@ -545,6 +589,8 @@ def decide(item, ident, cfg):
         return "skip", ["too old"], {}
     if not item["title"] or not item["url"]:
         return "skip", ["empty"], {}
+    if is_paper(item, ident, cfg):
+        return "skip", ["one of her papers (shown in Publications)"], {}
 
     pts, why = score(item, ident, cfg)
     if pts < cfg["thresholds"]["review"] - 2:
@@ -625,10 +671,25 @@ def main():
     log(f"Identity: {len(ident['coauthors'])} co-authors, {len(ident['paper_titles'])} papers, "
         f"{len(ident['learned'])} learned words")
 
+    # 2b) Remove her papers if any got in before this filter existed
+    for k in ("published", "review"):
+        keep, gone = [], 0
+        for it in db[k]:
+            probe = {"title": it["title"], "url": it["url"], "outlet_domain": ""}
+            if it.get("found_by") != "manual" and is_paper(probe, ident, cfg):
+                db.setdefault("excluded_papers", []).append({"title": it["title"], "url": it["url"]})
+                gone += 1
+            else:
+                keep.append(it)
+        db[k] = keep
+        if gone:
+            log(f"Removed {gone} paper(s) from {k}")
+
     # 3) Search and decide
     found = collect(cfg)
-    known_t = {title_key(x["title"]) for x in db["published"] + db["review"] + db["rejected"]}
-    known_u = {url_key(x["url"]) for x in db["published"] + db["review"] + db["rejected"]}
+    seen = db["published"] + db["review"] + db["rejected"] + db.get("excluded_papers", [])
+    known_t = {title_key(x["title"]) for x in seen}
+    known_u = {url_key(x["url"]) for x in seen}
     new_pub, new_rev, skipped = [], [], 0
     for item in found:
         tk, uk = title_key(item["title"]), url_key(item["url"])
