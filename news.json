@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-13 16:18 UTC",
+  "last_checked": "2026-10-13 16:27 UTC",
   "published": [
     {
       "category": "article",
@@ -252,30 +252,12 @@
         "found by exact-name search +3",
         "research words ['neurociencia'] +2"
       ]
-    },
-    {
-      "category": "article",
-      "platform": "web",
-      "kind": "News",
-      "outlet": "Nature",
-      "date": "2017-10-23",
-      "lang": "English",
-      "title": "Compared to self-immersion, mindful attention reduces salivation and automatic food bias | Scientific Reports",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ZYXR1VlowdWQxM0lodDd2R01nbGJCMXF6TkhzZGprOU9rOHpaMl95U1FvamZaWC1pbkVoeWdlOTc2Tnh3WVA4bEF4MDBLYlVGT3FLbUZpT2VFckp6T2Nj?oc=5",
-      "snippet": "",
-      "found_by": "Google News (US)",
-      "found_on": "2026-10-13",
-      "score": 5,
-      "why": [
-        "found by exact-name search +3",
-        "AI: similar to her work (0.45) +2"
-      ]
     }
   ],
   "rejected": [],
   "sources": {
-    "OpenAlex profile": "failed, using last profile ('NoneType' object has no attribute 'endswith')",
-    "Semantic AI": "ok (10 examples of her, 5 of not-her)",
+    "OpenAlex profile": "ok (18 papers)",
+    "Semantic AI": "ok (32 examples of her, 5 of not-her)",
     "Google News": "ok (22)",
     "Bing News": "ok (0)",
     "GDELT": "failed (HTTP Error 429: Too Many Requests)",
@@ -283,5 +265,11 @@
   },
   "counts": {
     "article": 14
-  }
+  },
+  "excluded_papers": [
+    {
+      "title": "Compared to self-immersion, mindful attention reduces salivation and automatic food bias | Scientific Reports",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ZYXR1VlowdWQxM0lodDd2R01nbGJCMXF6TkhzZGprOU9rOHpaMl95U1FvamZaWC1pbkVoeWdlOTc2Tnh3WVA4bEF4MDBLYlVGT3FLbUZpT2VFckp6T2Nj?oc=5"
+    }
+  ]
 }
