@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-13 17:32 UTC",
+  "last_checked": "2026-10-13 17:35 UTC",
   "published": [
     {
       "category": "article",
@@ -652,11 +652,11 @@
   "rejected": [],
   "sources": {
     "OpenAlex profile": "ok (18 papers)",
-    "Semantic AI": "ok (53 examples of her, 5 of not-her)",
-    "Links added by hand": "ok (1)",
+    "Semantic AI": "ok (54 examples of her, 5 of not-her)",
+    "Links added by hand": "ok (0)",
     "Google News": "ok (22)",
     "Bing News": "ok (0)",
-    "GDELT": "ok (0)",
+    "GDELT": "failed (HTTP Error 429: Too Many Requests)",
     "Own channels": "ok (0)"
   },
   "counts": {
