@@ -1,1 +1,64 @@
+name: Find news
 
+on:
+  schedule:
+    - cron: "17 11 * * *"   # every day, 08:17 in Chile
+  workflow_dispatch:         # "Run workflow" button in the Actions tab
+  push:
+    paths:
+      - config.json          # re-runs right away when you approve or block something
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: find-news
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache the AI model and packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/huggingface
+          key: ai-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Install the free AI model (if this fails, the robot still runs without it)
+        continue-on-error: true
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+
+      - name: Search everywhere
+        id: find
+        run: python find_news.py
+
+      - name: Save results
+        run: |
+          git config user.name "media-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json identity.json REVIEW.md
+          git diff --cached --quiet || git commit -m "Update media ($(date -u +%F))"
+          git pull --rebase --autostash || true
+          git push
+
+      - name: Email me when something needs review
+        if: steps.find.outputs.new_review != '0' && steps.find.outputs.new_review != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "New items to review (${{ steps.find.outputs.new_review }})" \
+            --body "The media robot found items it was not sure about. Open REVIEW.md to approve or block them: https://github.com/${{ github.repository }}/blob/main/REVIEW.md"
