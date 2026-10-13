@@ -330,6 +330,113 @@ def src_own_channels(cfg):
     return out
 
 
+def instagram_code(url):
+    m = re.search(r"instagram\.com/(?:[\w.]+/)?(p|reel|reels|tv)/([\w-]+)", url or "")
+    return (("reel" if m.group(1).startswith("reel") else m.group(1)), m.group(2)) if m else ("", "")
+
+
+MONTHS_EN = {m: i for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july",
+                                          "august", "september", "october", "november", "december"], 1)}
+
+
+def instagram_details(link):
+    """Instagram shows link previews to chat apps. We read that preview (title, text, date).
+    It often works, but Instagram can block it; then your own title in config.json is used."""
+    out = {"title": "", "outlet": "Instagram", "snippet": "", "date": ""}
+    try:
+        page = http(link, headers={"User-Agent": "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"})
+    except Exception as e:
+        log(f"    Instagram preview blocked for {link}: {e}")
+        return out
+    def meta(prop):
+        m = re.search(r'<meta[^>]+(?:property|name)=["\']' + prop + r'["\'][^>]+content=["\']([^"\']*)', page, re.I) or \
+            re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+(?:property|name)=["\']' + prop + r'["\']', page, re.I)
+        return html.unescape(m.group(1)).strip() if m else ""
+    title, desc = meta("og:title"), meta("og:description") or meta("description")
+    # og:title looks like:  CSCN UAI on Instagram: "Hoy la Dra. ..."
+    m = re.match(r'(.+?) on Instagram: ["“](.*)["”]\s*$', title, re.S)
+    if m:
+        out["outlet"] = m.group(1).strip() + " (Instagram)"
+        out["title"] = re.sub(r"\s+", " ", m.group(2)).strip()[:160]
+    elif title and "instagram" not in title.lower()[:12]:
+        out["title"] = title[:160]
+    # og:description looks like:  123 likes, 4 comments - cscn.uai on October 1, 2026: "text"
+    d = re.search(r"-\s*([\w.]+) on ([A-Z][a-z]+) (\d{1,2}), (\d{4})", desc)
+    if d and d.group(2).lower() in MONTHS_EN:
+        out["date"] = f"{d.group(4)}-{MONTHS_EN[d.group(2).lower()]:02d}-{int(d.group(3)):02d}"
+        if out["outlet"] == "Instagram":
+            out["outlet"] = "@" + d.group(1) + " (Instagram)"
+    txt = re.search(r':\s*["“](.*)["”]\s*\.?\s*$', desc, re.S)
+    out["snippet"] = re.sub(r"\s+", " ", txt.group(1) if txt else desc).strip()[:280]
+    return out
+
+
+def x_post_id(url):
+    m = re.search(r"(?:x|twitter)\.com/(?:#!/)?([\w]+)/status(?:es)?/(\d+)", url or "")
+    return (m.group(1), m.group(2)) if m else ("", "")
+
+
+def linkedin_post(url):
+    """Returns (urn_type, id) for LinkedIn post links."""
+    m = re.search(r"urn:li:(activity|share|ugcPost):(\d+)", urllib.parse.unquote(url or ""))
+    if m:
+        return m.group(1), m.group(2)
+    m = re.search(r"linkedin\.com/posts/[^/?#]*?(activity|share|ugcPost)-(\d{15,})", url or "")
+    return (m.group(1), m.group(2)) if m else ("", "")
+
+
+def id_to_date(num, shift, epoch_ms=0):
+    """X and LinkedIn hide the post date inside the post ID itself."""
+    try:
+        ms = (int(num) >> shift) + epoch_ms
+        return datetime.fromtimestamp(ms / 1000, timezone.utc).date().isoformat()
+    except Exception:
+        return ""
+
+
+def page_preview(link, ua):
+    """Reads the link preview that social networks give to chat apps (og:title, og:description)."""
+    try:
+        page = http(link, headers={"User-Agent": ua})
+    except Exception as e:
+        log(f"    Preview blocked for {link}: {e}")
+        return "", ""
+    def meta(prop):
+        m = re.search(r'<meta[^>]+(?:property|name)=["\']' + prop + r'["\'][^>]+content=["\']([^"\']*)', page, re.I) or \
+            re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+(?:property|name)=["\']' + prop + r'["\']', page, re.I)
+        return html.unescape(m.group(1)).strip() if m else ""
+    return meta("og:title"), (meta("og:description") or meta("description"))
+
+
+def x_details(link, user, pid):
+    """X's public oEmbed endpoint (free, no key) gives author and text."""
+    out = {"title": "", "outlet": f"@{user} (X)", "snippet": "", "date": id_to_date(pid, 22, 1288834974657)}
+    try:
+        o = get_json("https://publish.twitter.com/oembed?omit_script=true&dnt=true&url=" + urllib.parse.quote(link))
+        text = strip_html(re.sub(r"<a[^>]*>(pic\.twitter\.com|https?://t\.co)[^<]*</a>", "", o.get("html", "").split("&mdash;")[0]))
+        out["snippet"] = text[:280]
+        out["title"] = text[:140]
+        if o.get("author_name"):
+            out["outlet"] = f"{o['author_name']} (@{user}) on X"
+    except Exception as e:
+        log(f"    X details failed for {link}: {e}")
+    return out
+
+
+def linkedin_details(link, kind, pid):
+    out = {"title": "", "outlet": "LinkedIn", "snippet": "", "date": id_to_date(pid, 22)}
+    title, desc = page_preview(link, "LinkedInBot/1.0 (compatible; Mozilla/5.0; +http://www.linkedin.com)")
+    m = re.match(r"(.+?) (?:on LinkedIn|en LinkedIn)\s*:\s*(.*)$", title, re.S)
+    if m:
+        out["outlet"] = m.group(1).strip() + " (LinkedIn)"
+        out["title"] = re.sub(r"\s+", " ", m.group(2)).strip()[:160]
+    elif title and not title.lower().startswith(("linkedin", "sign up", "iniciar")):
+        out["title"] = title[:160]
+    if desc and "linkedin" not in desc.lower()[:40]:
+        out["snippet"] = re.sub(r"\s+", " ", desc).strip()[:280]
+    return out
+
+
 def src_manual_links(cfg, known_urls):
     """Links you paste in config.json -> "add_links". Trusted: published right away.
     YouTube details come from YouTube's public oEmbed endpoint (free, no key)."""
@@ -339,6 +446,13 @@ def src_manual_links(cfg, known_urls):
         link = link.strip()
         if youtube_id(link):
             link = f"https://www.youtube.com/watch?v={youtube_id(link)}"
+        kind_ig, code_ig = instagram_code(link)
+        if code_ig:
+            link = f"https://www.instagram.com/{kind_ig}/{code_ig}/"
+        x_user, x_id = x_post_id(link)
+        if x_id:
+            link = f"https://x.com/{x_user}/status/{x_id}"
+        li_kind, li_id = linkedin_post(link)
         if not link or url_key(link) in known_urls:
             continue
         known_urls.add(url_key(link))
@@ -362,6 +476,17 @@ def src_manual_links(cfg, known_urls):
                     date = m.group(1) if m else ""
                 except Exception:
                     pass
+        elif code_ig or x_id or li_id:
+            if code_ig:
+                d = instagram_details(link); fallback = "Post on Instagram"
+            elif x_id:
+                d = x_details(link, x_user, x_id); fallback = "Post on X"
+            else:
+                d = linkedin_details(link, li_kind, li_id); fallback = "Post on LinkedIn"
+            title = title or d["title"] or fallback
+            outlet = outlet or d["outlet"]
+            date = date or d["date"]
+            snippet = given.get("text", "") or d["snippet"]
         else:
             try:
                 page = http(link)
@@ -375,8 +500,18 @@ def src_manual_links(cfg, known_urls):
                 date = date or to_date(meta("article:published_time"))
             except Exception as e:
                 log(f"    Could not open {link}: {e}")
-        item = new_item(title or link, link, "Added by hand", outlet, date, snippet, True, True,
-                        {"video_id": vid, "thumb": thumb} if vid else None)
+        if vid:
+            extra = {"video_id": vid, "thumb": thumb}
+        elif code_ig:
+            extra = {"ig_code": code_ig, "ig_kind": kind_ig,
+                     "embed_url": f"https://www.instagram.com/{kind_ig}/{code_ig}/embed/captioned/", "embed_h": 640}
+        elif x_id:
+            extra = {"embed_url": f"https://platform.twitter.com/embed/Tweet.html?id={x_id}&dnt=true", "embed_h": 560}
+        elif li_id:
+            extra = {"embed_url": f"https://www.linkedin.com/embed/feed/update/urn:li:{li_kind}:{li_id}", "embed_h": 600}
+        else:
+            extra = None
+        item = new_item(title or link, link, "Added by hand", outlet, date, snippet, True, True, extra)
         item["manual"] = True
         if given.get("kind"):
             item["kind_override"] = given["kind"]
@@ -688,6 +823,10 @@ def to_entry(item, why, extra):
         e["video_id"] = vid
     if item.get("thumb"):
         e["thumb"] = item["thumb"]
+    if item.get("ig_code"):
+        e["ig_code"], e["ig_kind"] = item["ig_code"], item.get("ig_kind", "p")
+    if item.get("embed_url"):
+        e["embed_url"], e["embed_h"] = item["embed_url"], item.get("embed_h", 600)
     return e
 
 
@@ -814,4 +953,3 @@ def write_review(db):
 
 if __name__ == "__main__":
     sys.exit(main())
-
