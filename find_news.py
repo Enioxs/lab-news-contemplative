@@ -330,6 +330,60 @@ def src_own_channels(cfg):
     return out
 
 
+def src_manual_links(cfg, known_urls):
+    """Links you paste in config.json -> "add_links". Trusted: published right away.
+    YouTube details come from YouTube's public oEmbed endpoint (free, no key)."""
+    out = []
+    for entry in cfg.get("add_links", []):
+        link = entry if isinstance(entry, str) else entry.get("url", "")
+        link = link.strip()
+        if youtube_id(link):
+            link = f"https://www.youtube.com/watch?v={youtube_id(link)}"
+        if not link or url_key(link) in known_urls:
+            continue
+        known_urls.add(url_key(link))
+        given = entry if isinstance(entry, dict) else {}
+        title, outlet, thumb, date, snippet = given.get("title", ""), given.get("outlet", ""), "", given.get("date", ""), ""
+        vid = youtube_id(link)
+        if vid:
+            link = f"https://www.youtube.com/watch?v={vid}"
+            try:
+                o = get_json("https://www.youtube.com/oembed?format=json&url=" + urllib.parse.quote(link))
+                title = title or o.get("title", "")
+                outlet = outlet or o.get("author_name", "")
+                thumb = o.get("thumbnail_url", "")
+            except Exception as e:
+                log(f"    YouTube details failed for {link}: {e}")
+            if not date:
+                try:
+                    page = http(link)
+                    m = re.search(r'"(?:uploadDate|datePublished)"\s*:\s*"(\d{4}-\d{2}-\d{2})', page) or \
+                        re.search(r'itemprop="(?:uploadDate|datePublished)"\s+content="(\d{4}-\d{2}-\d{2})', page)
+                    date = m.group(1) if m else ""
+                except Exception:
+                    pass
+        else:
+            try:
+                page = http(link)
+                def meta(prop):
+                    m = re.search(r'<meta[^>]+(?:property|name)=["\']' + prop + r'["\'][^>]+content=["\']([^"\']*)', page, re.I) or \
+                        re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+(?:property|name)=["\']' + prop + r'["\']', page, re.I)
+                    return html.unescape(m.group(1)).strip() if m else ""
+                title = title or meta("og:title") or strip_html((re.search(r"<title>(.*?)</title>", page, re.S | re.I) or [None, ""])[1])
+                outlet = outlet or meta("og:site_name")
+                snippet = meta("og:description") or meta("description")
+                date = date or to_date(meta("article:published_time"))
+            except Exception as e:
+                log(f"    Could not open {link}: {e}")
+        item = new_item(title or link, link, "Added by hand", outlet, date, snippet, True, True,
+                        {"video_id": vid, "thumb": thumb} if vid else None)
+        item["manual"] = True
+        if given.get("kind"):
+            item["kind_override"] = given["kind"]
+        out.append(item)
+    return out
+
+
 def collect(cfg):
     log("Searching...")
     found = []
@@ -685,6 +739,18 @@ def main():
         if gone:
             log(f"Removed {gone} paper(s) from {k}")
 
+    # 2c) Links you added by hand -> published right away
+    seen0 = db["published"] + db["review"] + db.get("excluded_papers", [])
+    man = run_source("Links added by hand", lambda: src_manual_links(cfg, {url_key(x["url"]) for x in seen0}))
+    for item in man:
+        db["review"] = [x for x in db["review"] if url_key(x["url"]) != url_key(item["url"])]
+        e = to_entry(item, ["added by hand"], {"score": None})
+        if item.get("kind_override"):
+            e["kind"] = item["kind_override"]
+        e["found_by"] = "manual"
+        db["published"].append(e)
+        log(f"  + added by hand: [{e['platform']}] {e['title']}")
+
     # 3) Search and decide
     found = collect(cfg)
     seen = db["published"] + db["review"] + db["rejected"] + db.get("excluded_papers", [])
@@ -748,3 +814,4 @@ def write_review(db):
 
 if __name__ == "__main__":
     sys.exit(main())
+
