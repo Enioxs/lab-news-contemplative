@@ -101,7 +101,11 @@
     "own_channels": true
   },
   "oldest_year": 2015,
-  "add_links": [],
+  "add_links": ["https://www.youtube.com/watch?v=b_NQ2-3Hwrg","https://www.youtube.com/watch?v=0kK5QF5Ui3M","https://www.youtube.com/watch?v=tvXmzEYx-eg&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D",
+    "https://www.youtube.com/watch?v=DcRpHCfPq_E&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D", "https://www.youtube.com/watch?v=8P2etZBHb38&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D",
+    "https://www.youtube.com/watch?v=OXp0jX-goYk&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D", "https://www.youtube.com/watch?v=lWw3ypb0Z84&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D", 
+    "https://www.youtube.com/watch?v=7eZtkBAI8m0&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D", "https://www.youtube.com/watch?v=DxvVpO-3bdo&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D",
+    "https://www.youtube.com/watch?v=oNw_1YsxoEY&pp=ygUTY29uc3RhbnphIGJhcXVlZGFub9IHCQk3DAGHKiGM7w%3D%3D", "https://www.youtube.com/watch?v=ylJjWokvaPo&pp=ygUTY29uc3RhbnphIGJhcXVlZGFubw%3D%3D"],
   "approve": ["Uso de hongos con fines curativos", "Un exitoso panel del Festival Ladera Sur", "expertas del mundo fungi y neurociencias"],
   "blocklist": []
 }
