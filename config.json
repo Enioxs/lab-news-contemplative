@@ -101,6 +101,7 @@
     "own_channels": true
   },
   "oldest_year": 2015,
+  "add_links": [],
   "approve": ["Uso de hongos con fines curativos", "Un exitoso panel del Festival Ladera Sur", "expertas del mundo fungi y neurociencias"],
   "blocklist": []
 }
