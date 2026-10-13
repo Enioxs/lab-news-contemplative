@@ -6,39 +6,17 @@ The robot found these but was not sure, so they are **not** on the website yet.
 - **Hide it forever:** paste the same line into `blocklist`. The robot also learns from this.
 - Saving `config.json` re-runs the robot within a couple of minutes.
 
-_Last check: 2026-10-13 16:27 UTC_
+_Last check: 2026-10-13 16:40 UTC_
 
 ## Sources
 
 - OpenAlex profile: ok (18 papers)
-- Semantic AI: ok (32 examples of her, 5 of not-her)
+- Semantic AI: ok (34 examples of her, 5 of not-her)
 - Google News: ok (22)
 - Bing News: ok (0)
-- GDELT: failed (HTTP Error 429: Too Many Requests)
+- GDELT: ok (0)
 - Own channels: ok (0)
 
-## Items (2)
+## Items (0)
 
-### Uso de hongos con fines curativos: Un exitoso panel del Festival Ladera Sur
-**web** · Ladera Sur · 2023-12-04 · score 3
-
-Why: found by exact-name search +3
-
-[Open](https://news.google.com/rss/articles/CBMiqgFBVV95cUxNOWY2ejY1VjBzeXF2NDdpZnVzRTAzYmRjUFNKdXg2V3dKRFBzXzlJOWFKQjhSQzZOX0lGZmQ0bERIWV94NUJyaldjZkE4RDAycExmVmlqVWZBb2R2ZUltRGpuSFB1YkVzOVpYVGhaOVRoQ0pMUFdjNjJFd2pVVGpfTExMRWZzaDJMRTdmX2FrQ0d6WHZHRXhicjZZRGd2anNNakM5ZjZuc0tNQQ?oc=5)
-
-Approve line:
-```
-"Uso de hongos con fines curativos: Un exitoso panel del Festival Ladera Sur",
-```
-
-### Uso de hongos con fines curativos: expertas del mundo fungi y neurociencias se reúnen en imperdible panel del Festival Ladera Sur
-**web** · Ladera Sur · 2023-10-20 · score 5
-
-Why: found by exact-name search +3; research words ['neurociencia'] +2
-
-[Open](https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZnRvVlE1WXFqbjNVM2NjUUZwUnAtYlFLeW1PZHV5Vmhkdlljekg0MFdoZV9sdVpCalpfQnN4ZTZKSUtoNFdjaTZuTTA2S0wtRFJfcnhmUEZsVlZoVlFoQnRIa1lpbVZqbUVraUp6WlpzVHU3U2Jkd1lMVzFDRnlVT0lQWnRpU2dXVVRjc2dTd08yU01nclExS0c1dFRIb0lQUWQ0amg5TTBlZEEwbUlzQms4bml5YlBTb3BycGJ5VDFtQ3RKc3BKSjV1VHhYTDdrVDZtZWZCVXNMNVF5UU9TVDVSc3U5cWNRWU9hbkMtZnVyUQ?oc=5)
-
-Approve line:
-```
-"Uso de hongos con fines curativos: expertas del mundo fungi y neurociencias se r",
-```
+Nothing to review right now.
