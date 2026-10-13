@@ -1,13 +1,31 @@
 {
-  "last_checked": "",
+  "last_checked": "2026-10-13 16:18 UTC",
   "published": [
     {
+      "category": "article",
+      "platform": "web",
       "kind": "News",
-      "outlet": "El Mostrador (Revista Jengibre)",
-      "date": "2026-01-28",
+      "outlet": "G5noticias",
+      "date": "2026-09-10",
       "lang": "Spanish",
-      "title": "El cerebro pide naturaleza: estudio revela que el descanso digital no basta para recuperar la mente",
-      "url": "https://www.elmostrador.cl/revista-jengibre/viajes/outdoor/2026/01/28/el-cerebro-pide-naturaleza-estudio-revela-que-el-descanso-digital-no-basta-para-recuperar-la-mente/",
+      "title": "En Chile hay más suicidios que homicidios. Por Constanza Baquedano e Isidora Paiva-Mack, Escuela de Psicología UAI",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPUzhTUXEzSFJNVm9QbDlyQ2JGR2xFVzRaclBocHlJRTB0UHNrSFQ3VktGVklOV2hLdXhuTXF5b05rNXBoX2lRTUI1T3dsMURtT3d3OGdIRTU5bHFiam9CWDZCX0hfUzNwZGJVckJGbUpzVHBsQ2JEWFpYU1BEbWVuNVQ4LWhGRWJqS2NDVUdrV3ZSR1BhOXJlN3I3YWVNUy1CaFZ0dmQ0ZGh5THN1YmYybm1vb1hTWE5JVFdtVXlnNHYzT3lGV3FNMk9QVk9GaFBXbVdIWVRud2VnbHB0NjBr?oc=5",
+      "snippet": "",
+      "found_by": "Google News (CL)",
+      "found_on": "2026-10-13",
+      "score": 8,
+      "why": [
+        "full name +4",
+        "research words ['UAI', 'Escuela de Psicología'] +4"
+      ]
+    },
+    {
+      "kind": "News",
+      "outlet": "Psychology Today",
+      "date": "2026-05-01",
+      "lang": "English",
+      "title": "Three Key Insights on How Being in Nature Changes the Brain",
+      "url": "https://www.psychologytoday.com/us/blog/the-asymmetric-brain/202605/three-key-insights-on-how-being-in-nature-changes-the-brain",
       "found_by": "manual",
       "category": "article",
       "platform": "web",
@@ -17,11 +35,11 @@
     },
     {
       "kind": "News",
-      "outlet": "Despertar Entrerriano (Argentina)",
-      "date": "2026-01-29",
+      "outlet": "BioBioChile",
+      "date": "2026-03-22",
       "lang": "Spanish",
-      "title": "El cerebro exige naturaleza para repararse del agotamiento digital",
-      "url": "https://despertarentrerriano.com/el-cerebro-exige-naturaleza-para-repararse-del-agotamiento-digital/",
+      "title": "Estudio chileno confirma las 4 formas en que estar en la naturaleza beneficia nuestros cerebros",
+      "url": "https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/medio-ambiente-cyt/2026/03/22/estudio-chileno-confirma-las-4-formas-en-que-estar-en-la-naturaleza-beneficia-nuestros-cerebros.shtml",
       "found_by": "manual",
       "category": "article",
       "platform": "web",
@@ -30,12 +48,12 @@
       ]
     },
     {
-      "kind": "News",
-      "outlet": "Diario Usach",
-      "date": "2026-02-19",
+      "kind": "Interview",
+      "outlet": "Ladera Sur",
+      "date": "2026-03-02",
       "lang": "Spanish",
-      "title": "El cerebro lo pide: Estudio revela que el contacto real con la naturaleza reduce el estrés",
-      "url": "https://www.diariousach.cl/investigacion/ciencia/el-cerebro-lo-pide-estudio-revela-que-el-contacto-real-con-la-naturaleza",
+      "title": "¿Cómo enfrentar marzo y la hiperconexión? Según estudio, el cerebro exige naturaleza para repararse del agotamiento digital",
+      "url": "https://laderasur.com/articulo/como-enfrentar-marzo-y-la-hiperconexion-segun-estudio-el-cerebro-exige-naturaleza-para-repararse-del-agotamiento-digital/",
       "found_by": "manual",
       "category": "article",
       "platform": "web",
@@ -86,12 +104,45 @@
       ]
     },
     {
-      "kind": "Interview",
-      "outlet": "Ladera Sur",
-      "date": "2026-03-02",
+      "kind": "News",
+      "outlet": "Diario Usach",
+      "date": "2026-02-19",
       "lang": "Spanish",
-      "title": "¿Cómo enfrentar marzo y la hiperconexión? Según estudio, el cerebro exige naturaleza para repararse del agotamiento digital",
-      "url": "https://laderasur.com/articulo/como-enfrentar-marzo-y-la-hiperconexion-segun-estudio-el-cerebro-exige-naturaleza-para-repararse-del-agotamiento-digital/",
+      "title": "El cerebro lo pide: Estudio revela que el contacto real con la naturaleza reduce el estrés",
+      "url": "https://www.diariousach.cl/investigacion/ciencia/el-cerebro-lo-pide-estudio-revela-que-el-contacto-real-con-la-naturaleza",
+      "found_by": "manual",
+      "category": "article",
+      "platform": "web",
+      "why": [
+        "verified by hand"
+      ]
+    },
+    {
+      "category": "article",
+      "platform": "web",
+      "kind": "News",
+      "outlet": "ADN Radio",
+      "date": "2026-02-19",
+      "lang": "Spanish",
+      "title": "“Your Brain on Nature”: científica chilena explica cómo impacta el contacto con la naturaleza a nuestro cerebro",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSVBuMXhQUzBCN0lIU1A1Z1hpMC1RQmljZlhLaExySzM3VkhEVWtvbG05WjB6OE5ZLTRJQlhZS0xvaWhzcl92TnNVWTMwb0N3ZXlGU1l5NG5rdlFXdmVnaUVHd3JEdWlMNkdJRXk5cWVPMzN5SFk2aFRxRnNnQ2Fsd0psUnhnMVBMeVlwU24xUHJBbGNQQnE4Q0lSZXZzWGZqSFFSdWRqSl91NjNiZ2I4d25uNHlSdThHaTVJTmFJVHRLakdCMGUzTDczNlBEQ2NLMTZUVFFvODZILTYt0gHwAUFVX3lxTE1CYzRTTG5nYUZUMm02bVdlUlR4aEVxN005SWVPYzFvYzdadHZ4YktxVm1IRzdPSUVPS3Z0UkZRLS1iUzlaWkJocDRkck93dWZ0VUY1SXpxTmVTblBjcjJwRGMxblptZVRVbmNxSThIalVQS1VXUzhZNV90Ym5HVDJTVHJFQTItSkdtVng1Sm5yNUltUl9QN2dqeEJ3XzM0MUcxLVMzWWRuYzRReW9MSFVEM0xsM2Zua2w3WWNkLWlySlZ1ckVUZHdJeXM3ZlJsa0RMRnU0cHVMNHJVN0RpclRkZ2FvVEo2R2tRbkE3ZDBIZA?oc=5",
+      "snippet": "",
+      "found_by": "Google News (CL)",
+      "found_on": "2026-10-13",
+      "score": 14,
+      "why": [
+        "found by exact-name search +3",
+        "research words ['naturaleza', 'Your brain on nature', 'cerebro', 'brain'] +8",
+        "AI: very similar to her work (0.75) +3"
+      ]
+    },
+    {
+      "kind": "News",
+      "outlet": "Despertar Entrerriano (Argentina)",
+      "date": "2026-01-29",
+      "lang": "Spanish",
+      "title": "El cerebro exige naturaleza para repararse del agotamiento digital",
+      "url": "https://despertarentrerriano.com/el-cerebro-exige-naturaleza-para-repararse-del-agotamiento-digital/",
       "found_by": "manual",
       "category": "article",
       "platform": "web",
@@ -101,11 +152,11 @@
     },
     {
       "kind": "News",
-      "outlet": "BioBioChile",
-      "date": "2026-03-22",
+      "outlet": "El Mostrador (Revista Jengibre)",
+      "date": "2026-01-28",
       "lang": "Spanish",
-      "title": "Estudio chileno confirma las 4 formas en que estar en la naturaleza beneficia nuestros cerebros",
-      "url": "https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/medio-ambiente-cyt/2026/03/22/estudio-chileno-confirma-las-4-formas-en-que-estar-en-la-naturaleza-beneficia-nuestros-cerebros.shtml",
+      "title": "El cerebro pide naturaleza: estudio revela que el descanso digital no basta para recuperar la mente",
+      "url": "https://www.elmostrador.cl/revista-jengibre/viajes/outdoor/2026/01/28/el-cerebro-pide-naturaleza-estudio-revela-que-el-descanso-digital-no-basta-para-recuperar-la-mente/",
       "found_by": "manual",
       "category": "article",
       "platform": "web",
@@ -114,17 +165,41 @@
       ]
     },
     {
-      "kind": "News",
-      "outlet": "Psychology Today",
-      "date": "2026-05-01",
-      "lang": "English",
-      "title": "Three Key Insights on How Being in Nature Changes the Brain",
-      "url": "https://www.psychologytoday.com/us/blog/the-asymmetric-brain/202605/three-key-insights-on-how-being-in-nature-changes-the-brain",
-      "found_by": "manual",
       "category": "article",
       "platform": "web",
+      "kind": "News",
+      "outlet": "The Clinic",
+      "date": "2026-01-24",
+      "lang": "Spanish",
+      "title": "El “botón de reinicio” biológico existe: estudio confirma que el cerebro exige naturaleza para repararse del agotamiento digital",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNVkJHQmlLRWxKSENFcXk4NG05NUc0X1AxSzJ5V2lLa0Jkd3R5Nl9DSWxncjZHbXZYbmdNdW5ua2dmUmNoQlpCMWhnbzhMcm0xbmhiYlphazgtbTdRSTdnSjFiSlV1b3REcDJ2eXA2X25vcHpZQW5wLUlsZEJhdkx6dWUyMEZvVUFpbVM5M3RBdG43bHpDMEtKaDBreHNJYWhpY09wZmxfeXBHeVo2cWpXdXQyZW9XVUxVb1ZIcTVZVTB3dExOSEVFY0VsWHNqbmdUZWhFcWdOQjluYlBubjJ6aFlJOHAyLVpRZVRGWWZfRzNnc2NO0gH6AUFVX3lxTE1kRUNWNWFLZ0xyTEVXT2h6SGpUdzNyMzlCQWxVN3Ezb1U2OG81Mi14TVRQM1lReU15TFdqZEJmelFjYUl4elVzeTBsdWN0R1VGYVpLYUJKU211emtaMkpHb0s3bHp6WHYyWERUZHFnMzktQnJnZDRibk5VQ1lma1dnVFdhT1lqRFRwckJJTHctNmdWVzZaX3VSdHdBb1Qwci16THZHTHJxbkgya0ZDVnlKRGtJU3VNTGZPSDQ0OE1MR1h6SjRIam8yZmtBa2ptTUFVR0dmNDhmczU4YjJHTy1QbXhKLXlCRUxOQTFfMFFjMDNRMVVmaWdqcVE?oc=5",
+      "snippet": "",
+      "found_by": "Google News (CL)",
+      "found_on": "2026-10-13",
+      "score": 10,
       "why": [
-        "verified by hand"
+        "found by exact-name search +3",
+        "research words ['naturaleza', 'cerebro'] +4",
+        "AI: very similar to her work (0.80) +3"
+      ]
+    },
+    {
+      "category": "article",
+      "platform": "web",
+      "kind": "News",
+      "outlet": "Ciencia en Chile",
+      "date": "2023-10-04",
+      "lang": "Spanish",
+      "title": "Avanzando en la neurociencia de la experiencia: nuevos caminos inspirados por Francisco Varela",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNQXpMUjRjNmdjbjR5Rzg3V1RWT0hLV1M2WG9wSHF5WEJBQ0pDRG4xUXhxXzNFanhJTWlHQzM5ai1SZWlMYXNWTUJ5R245Smk3MjB6QjlQTEM1MS1SNi1DcFFvQk9feVRzdkRhZDBZWkFWTUltSHFMZGIxNlVPVHJKcmg1UG9FVExEZFR3TThwVGtzdG9LYlZvVXZKSE5GYVBFSXBxMlBUY0FrcGkxTlRzYzhucjJGa3BvekNCN0lONEdJQQ?oc=5",
+      "snippet": "",
+      "found_by": "Google News (CL)",
+      "found_on": "2026-10-13",
+      "score": 10,
+      "why": [
+        "found by exact-name search +3",
+        "research words ['neurociencia', 'Francisco Varela'] +4",
+        "AI: very similar to her work (0.54) +3"
       ]
     },
     {
@@ -142,6 +217,71 @@
       ]
     }
   ],
-  "review": [],
-  "rejected": []
+  "review": [
+    {
+      "category": "article",
+      "platform": "web",
+      "kind": "News",
+      "outlet": "Ladera Sur",
+      "date": "2023-12-04",
+      "lang": "Spanish",
+      "title": "Uso de hongos con fines curativos: Un exitoso panel del Festival Ladera Sur",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNOWY2ejY1VjBzeXF2NDdpZnVzRTAzYmRjUFNKdXg2V3dKRFBzXzlJOWFKQjhSQzZOX0lGZmQ0bERIWV94NUJyaldjZkE4RDAycExmVmlqVWZBb2R2ZUltRGpuSFB1YkVzOVpYVGhaOVRoQ0pMUFdjNjJFd2pVVGpfTExMRWZzaDJMRTdmX2FrQ0d6WHZHRXhicjZZRGd2anNNakM5ZjZuc0tNQQ?oc=5",
+      "snippet": "",
+      "found_by": "Google News (CL)",
+      "found_on": "2026-10-13",
+      "score": 3,
+      "why": [
+        "found by exact-name search +3"
+      ]
+    },
+    {
+      "category": "article",
+      "platform": "web",
+      "kind": "News",
+      "outlet": "Ladera Sur",
+      "date": "2023-10-20",
+      "lang": "Spanish",
+      "title": "Uso de hongos con fines curativos: expertas del mundo fungi y neurociencias se reúnen en imperdible panel del Festival Ladera Sur",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQZnRvVlE1WXFqbjNVM2NjUUZwUnAtYlFLeW1PZHV5Vmhkdlljekg0MFdoZV9sdVpCalpfQnN4ZTZKSUtoNFdjaTZuTTA2S0wtRFJfcnhmUEZsVlZoVlFoQnRIa1lpbVZqbUVraUp6WlpzVHU3U2Jkd1lMVzFDRnlVT0lQWnRpU2dXVVRjc2dTd08yU01nclExS0c1dFRIb0lQUWQ0amg5TTBlZEEwbUlzQms4bml5YlBTb3BycGJ5VDFtQ3RKc3BKSjV1VHhYTDdrVDZtZWZCVXNMNVF5UU9TVDVSc3U5cWNRWU9hbkMtZnVyUQ?oc=5",
+      "snippet": "",
+      "found_by": "Google News (CL)",
+      "found_on": "2026-10-13",
+      "score": 5,
+      "why": [
+        "found by exact-name search +3",
+        "research words ['neurociencia'] +2"
+      ]
+    },
+    {
+      "category": "article",
+      "platform": "web",
+      "kind": "News",
+      "outlet": "Nature",
+      "date": "2017-10-23",
+      "lang": "English",
+      "title": "Compared to self-immersion, mindful attention reduces salivation and automatic food bias | Scientific Reports",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ZYXR1VlowdWQxM0lodDd2R01nbGJCMXF6TkhzZGprOU9rOHpaMl95U1FvamZaWC1pbkVoeWdlOTc2Tnh3WVA4bEF4MDBLYlVGT3FLbUZpT2VFckp6T2Nj?oc=5",
+      "snippet": "",
+      "found_by": "Google News (US)",
+      "found_on": "2026-10-13",
+      "score": 5,
+      "why": [
+        "found by exact-name search +3",
+        "AI: similar to her work (0.45) +2"
+      ]
+    }
+  ],
+  "rejected": [],
+  "sources": {
+    "OpenAlex profile": "failed, using last profile ('NoneType' object has no attribute 'endswith')",
+    "Semantic AI": "ok (10 examples of her, 5 of not-her)",
+    "Google News": "ok (22)",
+    "Bing News": "ok (0)",
+    "GDELT": "failed (HTTP Error 429: Too Many Requests)",
+    "Own channels": "ok (0)"
+  },
+  "counts": {
+    "article": 14
+  }
 }
