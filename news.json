@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-13 16:40 UTC",
+  "last_checked": "2026-10-13 16:44 UTC",
   "published": [
     {
       "category": "article",
@@ -261,7 +261,7 @@
     "Semantic AI": "ok (34 examples of her, 5 of not-her)",
     "Google News": "ok (22)",
     "Bing News": "ok (0)",
-    "GDELT": "ok (0)",
+    "GDELT": "failed (HTTP Error 429: Too Many Requests)",
     "Own channels": "ok (0)"
   },
   "counts": {
