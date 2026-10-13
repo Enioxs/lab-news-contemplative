@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-13 17:24 UTC",
+  "last_checked": "2026-10-13 17:32 UTC",
   "published": [
     {
       "category": "article",
@@ -629,23 +629,41 @@
       "ig_kind": "p",
       "embed_url": "https://www.instagram.com/p/CrgbrAMrIfQ/embed/captioned/",
       "embed_h": 640
+    },
+    {
+      "category": "audio",
+      "platform": "spotify",
+      "kind": "Podcast",
+      "outlet": "Spotify",
+      "date": "",
+      "lang": "Spanish",
+      "title": "TDAH, Mindfulness, Estados Alterados de Conciencia y Psicodelia c/ Dra. Constanza Baquedano",
+      "url": "https://open.spotify.com/episode/2xxUfQvVLZiWrZTcyTmtgN",
+      "snippet": "Mi Última Neurona · Episode",
+      "found_by": "manual",
+      "found_on": "2026-10-13",
+      "score": null,
+      "why": [
+        "added by hand"
+      ]
     }
   ],
   "review": [],
   "rejected": [],
   "sources": {
     "OpenAlex profile": "ok (18 papers)",
-    "Semantic AI": "ok (45 examples of her, 5 of not-her)",
-    "Links added by hand": "ok (8)",
+    "Semantic AI": "ok (53 examples of her, 5 of not-her)",
+    "Links added by hand": "ok (1)",
     "Google News": "ok (22)",
     "Bing News": "ok (0)",
-    "GDELT": "failed (HTTP Error 429: Too Many Requests)",
+    "GDELT": "ok (0)",
     "Own channels": "ok (0)"
   },
   "counts": {
     "article": 16,
     "video": 11,
-    "social": 8
+    "social": 8,
+    "audio": 1
   },
   "excluded_papers": [
     {
