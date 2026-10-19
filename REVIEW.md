@@ -6,7 +6,7 @@ The robot found these but was not sure, so they are **not** on the website yet.
 - **Hide it forever:** paste the same line into `blocklist`. The robot also learns from this.
 - Saving `config.json` re-runs the robot within a couple of minutes.
 
-_Last check: 2026-10-18 14:36 UTC_
+_Last check: 2026-10-19 17:30 UTC_
 
 ## Sources
 
@@ -15,7 +15,7 @@ _Last check: 2026-10-18 14:36 UTC_
 - Links added by hand: ok (0)
 - Google News: ok (22)
 - Bing News: ok (0)
-- GDELT: failed (HTTP Error 429: Too Many Requests)
+- GDELT: ok (0)
 - Own channels: ok (0)
 
 ## Items (0)
