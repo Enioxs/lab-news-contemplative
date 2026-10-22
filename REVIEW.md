@@ -6,7 +6,7 @@ The robot found these but was not sure, so they are **not** on the website yet.
 - **Hide it forever:** paste the same line into `blocklist`. The robot also learns from this.
 - Saving `config.json` re-runs the robot within a couple of minutes.
 
-_Last check: 2026-10-21 15:58 UTC_
+_Last check: 2026-10-22 15:54 UTC_
 
 ## Sources
 
