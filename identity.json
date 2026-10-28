@@ -1,5 +1,5 @@
 {
-  "built_on": "2026-10-27",
+  "built_on": "2026-10-28",
   "coauthors": [
     "Antoine Lutz A",
     "David Martínez‐Pernía",
@@ -17,6 +17,10 @@
     "Silvia Barría",
     "Sofía Walsen",
     "Covadonga Chaves",
+    "Antonia Olguí",
+    "Luis Sebastian Contreras-Huerta",
+    "Fernando E. Rosas",
+    "Mar Estarellas",
     "Ignacio Cea",
     "Jorge Calderón Vergara",
     "Claudio Araya-Véliz",
@@ -28,10 +32,6 @@
     "Enrique Lorca‐Ponce",
     "Christoph Steinebach",
     "Alvaro Ignacio Langer",
-    "Antonia Olguí",
-    "Luis Sebastian Contreras-Huerta",
-    "Fernando E. Rosas",
-    "Mar Estarellas",
     "Catherine I. Andreu",
     "Ausiàs Cebolla",
     "Jessy Deroche",
@@ -64,14 +64,14 @@
     "Maternal Mental Health During Pregnancy and Postpartum",
     "Emotions and Moral Behavior",
     "Social and Intergroup Psychology",
-    "Eating Disorders and Behaviors",
-    "Psychotherapy Techniques and Applications"
+    "Urban Green Space and Health",
+    "Aesthetic Perception and Analysis"
   ],
   "paper_titles": [
+    "Your brain on nature: A scoping review of the neuroscience of nature exposure",
     "Compared to self-immersion, mindful attention reduces salivation and automatic food bias",
     "“I am feeling tension in my whole body”: An experimental phenomenological study of empathy for pain",
     "The Impact of Baseline Mindfulness Scores on Mindfulness-Based Intervention Outcomes: Toward Personalized Mental Health Interventions",
-    "Your brain on nature: A scoping review of the neuroscience of nature exposure",
     "The spectrum of embodied intersubjective synchrony in empathy: from fully embodied to externally oriented engagement in Parkinson's disease",
     "Ready to help, no matter what you did: Responsibility attribution does not influence compassion in expert Buddhist practitioners.",
     "Electrophysiological evidence of the differential modulation of approach‐related processes toward attractive foods by immersive or mindful viewing conditions",
@@ -144,10 +144,10 @@
   ],
   "learned": {},
   "paper_texts": [
+    "Your brain on nature: A scoping review of the neuroscience of nature exposure. The relationship between natural environments and human cognition has gathered increasing attention across disciplines, including neuroscience, environmental psychology, and public health. An expanding body of empirical evidence supports the notion that exposure to nature consistently promotes psychological and physiological well-being. However, our understanding of the neural mechanisms underlying these benefits remains limited. This scoping review synthesizes experimental findings from neuroimaging studies that have examined the effects of natural stimuli on brain function and cognitive-affective processing. Across real-world settings, controlled laboratory environments, and virtual reality, convergent neuroimaging findings from EEG, fMRI, fNIRS, and structural MRI indicate that exposure to natural stimuli is reliably associated with (i) acute reductions in activity within stress-related and self-referential circuits, (ii) shifts toward alpha/theta-dominated and more integrated large-scale network states consistent with attentional restoration, and (iii) longer-term macrostructural and white-matter adv",
     "Compared to self-immersion, mindful attention reduces salivation and automatic food bias. Immersing ourselves in food images can sometimes make it feel subjectively real, as if the actual food were right in front of us. Excessive self-immersion into mental content, however, is a hallmark of psychological distress, and of several psychiatric conditions. Being aware that imagined events are not necessarily an accurate depiction of reality is a key feature of psychotherapeutic approaches akin to mindfulness-based interventions. Yet, it is still largely unknown to what extent one's engagement with mental content, considering it as real, biases one's automatic tendencies toward the world. In this study, we measured the change in subjective realism induced by a self-immersion and a mindful attention instruction, using self-reports and saliva volumes. Then, we measured behaviorally the impact of subjective realism changes on automatic approach bias toward attractive food (FAB) using an approach-avoidance task. We found a reduction in saliva volume, followed by a reduction in FAB in the mindful condition compared to the immersed condition. During the immersed condition only, saliva volumes",
     "“I am feeling tension in my whole body”: An experimental phenomenological study of empathy for pain. Introduction: Traditionally, empathy has been studied from two main perspectives: the theory-theory approach and the simulation theory approach. These theories claim that social emotions are fundamentally constituted by mind states in the brain. In contrast, classical phenomenology and recent research based on the enactive theories consider empathy as the basic process of contacting others' emotional experiences through direct bodily perception and sensation. Objective: This study aims to enrich the knowledge of the empathic experience of pain using an experimental phenomenological method. Materials and methods: Implementing an experimental paradigm used in affective neuroscience, we exposed 28 healthy adults to a video of sportspersons suffering physical accidents while practicing extreme sports. Immediately after watching the video, each participant underwent a phenomenological interview to gather data on embodied, multi-layered dimensions (bodily sensations, emotions, and motivations) and temporal aspects of empathic experience. We also performed quantitative analyses of the phen",
     "The Impact of Baseline Mindfulness Scores on Mindfulness-Based Intervention Outcomes: Toward Personalized Mental Health Interventions. A growing body of evidence has portrayed mindfulness as a useful tool for dealing with a broad range of psychological problems and disorders. This has created the impression that mindfulness-based interventions (MBIs) can be used to treat nearly all psychological difficulties, in all cases. Nonetheless, little research has been done on how individual differences may contribute to intervention outcomes. The goal of this study was to evaluate the role of baseline mindfulness on participants' outcomes by examining three prior Randomized Controlled Trials that addressed the impact of MBIs on mental health and mindfulness measures. The participants were 164 people, aged between 12 and 45, from both clinical and non-clinical samples. Our findings indicate that at least two thirds of the change produced by these interventions in terms of mindfulness scores can be predicted by the baseline scores of the same variables. We also found that many trajectories are not only strongly influenced by the initial status of the participants, but also by the interventio",
-    "Your brain on nature: A scoping review of the neuroscience of nature exposure. The relationship between natural environments and human cognition has gathered increasing attention across disciplines, including neuroscience, environmental psychology, and public health. An expanding body of empirical evidence supports the notion that exposure to nature consistently promotes psychological and physiological well-being. However, our understanding of the neural mechanisms underlying these benefits remains limited. This scoping review synthesizes experimental findings from neuroimaging studies that have examined the effects of natural stimuli on brain function and cognitive-affective processing. Across real-world settings, controlled laboratory environments, and virtual reality, convergent neuroimaging findings from EEG, fMRI, fNIRS, and structural MRI indicate that exposure to natural stimuli is reliably associated with (i) acute reductions in activity within stress-related and self-referential circuits, (ii) shifts toward alpha/theta-dominated and more integrated large-scale network states consistent with attentional restoration, and (iii) longer-term macrostructural and white-matter adv",
     "The spectrum of embodied intersubjective synchrony in empathy: from fully embodied to externally oriented engagement in Parkinson's disease. Background: Parkinson's disease is a prevalent neurodegenerative disorder that not only affects motor function but also impairs empathy. While the neurobiological changes underlying these deficits are known, the impact of PD on the lived experience of empathy remains poorly understood. This study investigates the lived experience of empathy for pain in individuals with PD, with a specific focus on embodied intersubjective synchrony. Method: Forty-five patients with mild to moderate PD were exposed to videos of athletes suffering falls during extreme sports. Following exposure, participants underwent phenomenological interviews to explore their embodied experiences in connection with the other's suffering. Data were analyzed through an iterative process involving three independent analyses, triangulation, and the application of advanced analytical techniques (CAQDAS, inter-rater agreement index, interactive dashboards, spider graphs) to enhance the depth of the phenomenological analysis. Results: This study provides a nuanced view of empathy fo",
     "Ready to help, no matter what you did: Responsibility attribution does not influence compassion in expert Buddhist practitioners.. Within western social psychology and neuroscience, compassion is described as being conditioned by cost-benefit appraisals, such as the attribution of responsibility for the causes of suffering. Buddhist traditions maintain the possibility of cultivating and embodying unconditioned and universal forms of compassion. Whereas a growing body of empirical literature suggests that Buddhist-inspired compassion-based programs foster prosociality and well-being in healthy and clinical populations, there is no evidence that such compassionate disposition toward others can become unconditioned from moral judgment. To address this question, we collected and integrated self-report and behavioral data from expert Buddhist practitioners and trained novices using a previously validated within-subject experiment that manipulates contextual information to influence moral judgment toward suffering others and a newly designed approach-avoidance task. We found that context manipulation impacted responsibility and blame attribution in both groups and that experts' reported ",
     "Electrophysiological evidence of the differential modulation of approach‐related processes toward attractive foods by immersive or mindful viewing conditions. Awareness of mental events as mere representations rather than as accurate depictions of reality, also known as dereification, is one of the key features of mindfulness meditation. Dereification is juxtaposed to subjective realism, the process of being lost or totally immersed in the contents of one's mind. Excessive subjective realism is a hallmark of several psychiatric disorders. Here, we investigated whether a \"mindful\" (dereified) compared with an \"immersed\" (highly subjectively real) attitude, induced by instructions, differentially modulates approach-avoidance tendencies when processing visual stimuli. We presented novices and experienced meditators with neutral and attractive food images under both mindful and immersed states. Then, participants performed an approach-avoidance Task (AAT) during which we obtained behavioral data, salivary volume, EEG recordings, and self-report measures. The approach bias toward attractive food was correlated with N2 amplitude, a marker of response inhibition, and the regulation of thi",
