@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-28 17:12 UTC",
+  "last_checked": "2026-10-29 17:27 UTC",
   "published": [
     {
       "category": "article",
@@ -656,7 +656,7 @@
     "Links added by hand": "ok (0)",
     "Google News": "ok (21)",
     "Bing News": "ok (0)",
-    "GDELT": "failed (HTTP Error 429: Too Many Requests)",
+    "GDELT": "ok (0)",
     "Own channels": "ok (0)"
   },
   "counts": {
