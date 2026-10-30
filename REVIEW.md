@@ -6,7 +6,7 @@ The robot found these but was not sure, so they are **not** on the website yet.
 - **Hide it forever:** paste the same line into `blocklist`. The robot also learns from this.
 - Saving `config.json` re-runs the robot within a couple of minutes.
 
-_Last check: 2026-10-29 17:27 UTC_
+_Last check: 2026-10-30 17:01 UTC_
 
 ## Sources
 
@@ -14,7 +14,7 @@ _Last check: 2026-10-29 17:27 UTC_
 - Semantic AI: ok (54 examples of her, 5 of not-her)
 - Links added by hand: ok (0)
 - Google News: ok (21)
-- Bing News: ok (0)
+- Bing News: failed (not well-formed (invalid token): line 1, column 41)
 - GDELT: ok (0)
 - Own channels: ok (0)
 
