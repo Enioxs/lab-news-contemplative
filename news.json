@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-30 17:01 UTC",
+  "last_checked": "2026-10-31 16:05 UTC",
   "published": [
     {
       "category": "article",
@@ -654,8 +654,8 @@
     "OpenAlex profile": "ok (18 papers)",
     "Semantic AI": "ok (54 examples of her, 5 of not-her)",
     "Links added by hand": "ok (0)",
-    "Google News": "ok (21)",
-    "Bing News": "failed (not well-formed (invalid token): line 1, column 41)",
+    "Google News": "ok (22)",
+    "Bing News": "ok (0)",
     "GDELT": "ok (0)",
     "Own channels": "ok (0)"
   },
