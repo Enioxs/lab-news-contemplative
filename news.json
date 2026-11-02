@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-01 17:09 UTC",
+  "last_checked": "2026-11-02 20:47 UTC",
   "published": [
     {
       "category": "article",
@@ -651,11 +651,11 @@
   "review": [],
   "rejected": [],
   "sources": {
-    "OpenAlex profile": "ok (18 papers)",
+    "OpenAlex profile": "failed, using last profile (HTTP Error 429: Too Many Requests)",
     "Semantic AI": "ok (54 examples of her, 5 of not-her)",
     "Links added by hand": "ok (0)",
     "Google News": "ok (22)",
-    "Bing News": "ok (0)",
+    "Bing News": "failed (not well-formed (invalid token): line 1, column 41)",
     "GDELT": "failed (HTTP Error 429: Too Many Requests)",
     "Own channels": "ok (0)"
   },
