@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-11-03 18:27 UTC",
+  "last_checked": "2026-11-04 18:40 UTC",
   "published": [
     {
       "category": "article",
@@ -648,13 +648,32 @@
       ]
     }
   ],
-  "review": [],
+  "review": [
+    {
+      "category": "article",
+      "platform": "web",
+      "kind": "News",
+      "outlet": "El Planteo",
+      "date": "2026-11-03",
+      "lang": "Spanish",
+      "title": "LAPsyConf 2026 en Santiago de Chile: agenda, speakers e inscripción",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBlVTNPM3pRMk1SanNxajhMSUFCeFlZcnV3QVpSUjB6bVgzTWJDajhqX2htTzlPVHdOVGtHcGlZaUVrZEUyRHo0STNLWTAwWmlYNVNDVGktQ2hEVHpFNlA0ZXR3?oc=5",
+      "snippet": "",
+      "found_by": "Google News (CL)",
+      "found_on": "2026-11-04",
+      "score": 6,
+      "why": [
+        "found by exact-name search +3",
+        "AI: very similar to her work (0.52) +3"
+      ]
+    }
+  ],
   "rejected": [],
   "sources": {
-    "OpenAlex profile": "ok (18 papers)",
-    "Semantic AI": "ok (54 examples of her, 5 of not-her)",
+    "OpenAlex profile": "ok (15 papers)",
+    "Semantic AI": "ok (51 examples of her, 5 of not-her)",
     "Links added by hand": "ok (0)",
-    "Google News": "ok (22)",
+    "Google News": "ok (24)",
     "Bing News": "ok (0)",
     "GDELT": "ok (0)",
     "Own channels": "ok (0)"
