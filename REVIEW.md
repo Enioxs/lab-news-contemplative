@@ -6,16 +6,16 @@ The robot found these but was not sure, so they are **not** on the website yet.
 - **Hide it forever:** paste the same line into `blocklist`. The robot also learns from this.
 - Saving `config.json` re-runs the robot within a couple of minutes.
 
-_Last check: 2026-11-24 21:12 UTC_
+_Last check: 2026-11-25 20:29 UTC_
 
 ## Sources
 
 - OpenAlex profile: ok (15 papers)
 - Semantic AI: ok (51 examples of her, 5 of not-her)
 - Links added by hand: ok (0)
-- Google News: ok (21)
+- Google News: ok (24)
 - Bing News: ok (0)
-- GDELT: failed (HTTP Error 429: Too Many Requests)
+- GDELT: ok (0)
 - Own channels: ok (0)
 
 ## Items (1)
